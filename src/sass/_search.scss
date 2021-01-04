@@ -1,0 +1,41 @@
+.search {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+  .containerTxt {
+    @include containerInputs;
+    .txtMovie {
+      @include inputs;
+      padding: 10px 0px 10px 35px;
+      background-color: rgba($color: #becccc, $alpha: 0.5);
+      color: $colorNegro;
+      &:focus {
+          border-color: $colorBlanco;
+          background-color: rgba($color: #becccc, $alpha: 0.3);
+          color: $colorBlanco;
+      }
+    }
+    .icoSearch {
+      font-size: 1.25rem;
+      color: $colorNegro;
+      position: absolute;
+      left: 33.1%;
+      top: 24.8%;
+    }
+  }
+  .containerBtn {
+    @include containerInputs;
+    .btnMovie {
+      @include inputs;
+      background-color: $colorNaranja;
+      color: white;
+      cursor: pointer;
+      &:hover {
+          background-color: $colorRojo;
+          border-color: $colorBlanco;
+      }
+    }
+  }
+}

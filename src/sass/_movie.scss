@@ -1,0 +1,74 @@
+.containerMovie {
+  /* background-color: red; */
+  background-color: rgba($color: $colorNegro, $alpha: 0.5);
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: $colorBlanco;
+  margin: 0px auto;
+  .containerImg {
+    width: 50%;
+    /* background-color: white; */
+    padding: 1rem;
+    text-align: center;
+    img {
+      /* height: 356px; */
+      /* position: absolute;
+      right: 50%; */
+    }
+  }
+  .containerInfoMovie {
+    width: 50%;
+
+    padding: 1rem;
+    .titleMovie {
+      font-size: 2rem;
+      border-bottom: 2px solid $colorBlanco;
+      margin-bottom: 0.5rem;
+    }
+    .subcontainerInfoMovie {
+      /* background-color: red; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      .yearMovie,
+      .ratedMovie,
+      .genereMovie,
+      .runtimeMovie,
+      .countryMovie {
+        font-size: 0.8rem;
+      }
+    }
+    .plotMovie {
+      font-size: 1.4375rem;
+      margin-bottom: 1rem;
+    }
+    .containerAwards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      .icoAwards {
+        font-size: 1.8rem;
+        color: #cac531;
+        color: -webkit-linear-gradient(to right, #f3f9a7, #cac531);
+        color: linear-gradient(to right, #f3f9a7, #cac531);
+        width: 20%;
+      }
+      .awardsMovie {
+        font-size: 0.8rem;
+        width: 75%;
+      }
+    }
+    .actorsMovie {
+      font-size: 0.7rem;
+      margin-top: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .ticketMovie {
+      font-size: 1.5rem;
+    }
+  }
+}
