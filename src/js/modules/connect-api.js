@@ -1,6 +1,6 @@
 export const containerMovie = document.querySelector(".containerMovie");
 
-import { mostrarHTML, errorDiv } from "./show-html";
+import { mostrarHTML, errorDiv, Spinner } from "./show-html";
 import { concatURL, intervalTime } from "./functions";
 import { btnMovie } from "../app";
 
@@ -23,6 +23,11 @@ export function searchMovie() {
 }
 
 function infoAPI(url) {
+  Spinner();
+  let spinnerLoad = document.querySelector(".spinner");
+  setTimeout(() => {
+    spinnerLoad.remove();
+  }, 2500);
   fetch(url)
     .then((respuesta) => respuesta.json())
     .then((resultado) => {

@@ -33,6 +33,19 @@ module.exports = {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
         use: ['file-loader']
       },
+      {
+        test: /\.(jpg|jpeg|gif|png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'imageNotFound.jpg',
+              output: 'img/',
+              useRelativePath: true
+            }
+          }
+        ]
+      }
     ],
   },
   plugins: [

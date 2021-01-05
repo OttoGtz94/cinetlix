@@ -6,7 +6,9 @@ Proyecto donde se ingresa el nombre de una película y la busca en la API *REST 
 
 - ECMAScript 6
 - Webpack 
+- Babel
 - Sass
+
 
 ### Distribuciones de carpetas
 La carpeta **src** contiene los archivos en modo *desarrollo* y la carpeta **public** en modo *producción*. 

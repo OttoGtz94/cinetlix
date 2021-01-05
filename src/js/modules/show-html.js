@@ -5,15 +5,28 @@ import {
   createElement,
   createSpan,
   addClass,
+  intervalTime
 } from "./functions";
+import image404 from "../../img/notFound404.jpg";
 
 export function mostrarHTML(infoMovie) {
   clearHtml();
+  /* Spinner()
+  let spinnerLoad = document.querySelector(".spinner");
+  intervalTime(spinnerLoad); */
+ /*  Spinner();
+  let spinnerLoad = document.querySelector(".spinner");
+  setTimeout(() => {
+    spinnerLoad.remove()
+  }, 3000); */
   let containerImg = createElement("div");
   addClass(containerImg, "containerImg");
   let img = createElement("img");
   addClass(img, "imgMovie");
-  img.src = infoMovie.Poster;
+  infoMovie.Poster === "N/A"
+    ? (img.src = image404)
+    : (img.src = infoMovie.Poster);
+
   addClass(img, "imgMovie");
   containerImg.appendChild(img);
   containerMovie.appendChild(containerImg);
@@ -46,8 +59,6 @@ export function mostrarHTML(infoMovie) {
   containerInfoMovie.appendChild(containerAwards);
 
   /* Creamos icono de recocimientos */
-  /* let icoAwards = '<i class="fas fa-trophy icoAwards"></i>';
-  containerAwards.innerHTML = icoAwards; */
   let icoAwards = createElement("i");
   icoAwards.classList.add("fas", "fa-trophy", "icoAwards");
   containerAwards.appendChild(icoAwards);
@@ -84,4 +95,14 @@ function clearHtml() {
   while (containerMovie.children.length > 0) {
     containerMovie.firstElementChild.remove();
   }
+}
+
+export function Spinner() {
+  const divSpinner = document.createElement("div");
+  divSpinner.classList.add("spinner");
+  divSpinner.innerHTML = `
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  `;
+  containerMovie.appendChild(divSpinner)
 }
